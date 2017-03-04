@@ -1,0 +1,624 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+html,body{
+	width:100%;
+	height: 100%;
+	overflow: hidden;
+	font-size:0;
+}
+
+.spinner {
+	width: 100%;
+	height: 100%;
+	padding-top: 60%;
+  	text-align: center;
+  	background-image:url("../image/background.png");
+  	z-index: 20050;
+  	/*opacity: 0.7;*/
+}
+ 
+.spinner > div {
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: #eccbb2;
+ 
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+  animation: bouncedelay 1.4s infinite ease-in-out;
+  /* Prevent first frame from flickering when animation starts */
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+ 
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+ 
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+ 
+@-webkit-keyframes bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0.0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+ 
+@keyframes bouncedelay {
+  0%, 80%, 100% {
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 40% {
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
+
+#bb-nav-prev{
+	position: absolute;
+	top:0;
+	left:0;
+	width: 40%;
+	height: 100%;
+	background-color: rgba(0,0,0,0);
+	display: block;
+	z-index: 200;
+}
+
+#bb-nav-next{
+	position: absolute;
+	top:0;
+	right:0;
+	width: 40%;
+	height: 100%;
+	background-color: rgba(0,0,0,0);
+	display: block;
+	z-index: 200;
+}
+
+#circle{
+	position: absolute;
+	bottom: 1rem;
+	z-index: 20000;
+	/*display: none;*/
+}
+
+#circle li{
+	list-style: none;
+	width: 0.3rem;
+	height: 0.3rem;
+	border-radius: 50%;
+	background-color: #dad7d5;
+	margin-left: 0.2rem;
+	opacity: 0.7;
+	float: left;
+	z-index: 20000;
+}
+
+#circle .circle-1{
+	margin-left: 3.7rem;
+	background-color: #eccbb2;
+}
+.flipbook .page{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	background-image:url("../image/background.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.flipbook .page-1 .page-1-title{
+	width: 3.9rem;
+	height: 6.8rem;
+	margin-top:1rem;
+	margin-left: 6.1rem;
+}
+
+.flipbook .page-1 .page-1-circles{
+	width: 2rem;
+	height: 2rem;
+	margin-top:2.5rem;
+	margin-left: 4.8rem;
+}
+
+.flipbook .page-1 .page-1-circleb{
+	width: 3.2rem;
+	height: 3.4rem;
+	margin-left: 4.2rem;
+}
+
+.flipbook .page-2 .page-2-name{
+	font-size: 0.8rem;
+	font-weight: bold;
+	color:#FE5857;
+	margin-left: 6.1rem;
+	margin-top: 4.8rem;
+}
+
+.flipbook .page-2 .page-2-mate{
+	width: 2rem;
+	height: 1.5rem;
+	position: absolute;
+	right: 1.2rem;
+	top: 4.5rem;
+}
+
+.flipbook .page-2 .page-2-year{
+	font-size: 1rem;
+	font-weight: bold;
+	color:#FE5857;
+	position: absolute;
+	top:6.7rem;
+	left:6.5rem;
+}
+
+.flipbook .page-2 .page-2-word-1{
+	width: 2rem;
+	height: 1.4rem;
+	position: absolute;
+	right: 0.8rem;
+	top:6.5rem;
+}
+
+.flipbook .page-2 .page-2-word-2{
+	width: 7rem;
+	height: 1.32rem;
+	margin-left: 3.1rem;
+	margin-top:3rem;
+}
+
+.flipbook .page-3 .page-3-title-1{
+	width: 1.2rem;
+	height: 1.1rem;
+	margin-left: 2rem;
+	margin-top:1.8rem;
+}
+
+.flipbook .page-3 .page-3-curr{
+	font-size: 1rem;
+	font-weight: bold;
+	color: #FE5857;
+	width: 1.2rem;
+	height: 1.2rem;
+	position: absolute;
+	top:1.8rem;
+	left: 3.4rem;
+}
+
+.flipbook .page-3 .page-3-title-2{
+	width: 5rem;
+	height: 1.1rem;
+	margin-left: 1rem;
+	padding-top:1.2rem;
+}
+
+.flipbook .page-3 .page-3-word-1{
+	width: 3rem;
+	height: 1.5rem;
+	margin-left: 1rem;
+	margin-top:1.2rem;
+}
+
+.flipbook .page-3 .page-3-credit{
+	font-size: 1.7rem;
+	font-weight: bold;
+	color: #FE5857;
+	position: absolute;
+	top:6.3rem;
+	left: 4.2rem;
+}
+
+.flipbook .page-3 .page-3-course{
+	font-size: 1.8rem;
+	font-weight: bold;
+	color: #FE5857;
+	position: absolute;
+	top:10.5rem;
+	left: 4.5rem;
+}
+
+.flipbook .page-3 .page-3-word-2{
+	width: 2rem;
+	height: 1.5rem;
+	margin-left: 8rem;
+	margin-top:1rem;
+}
+
+.flipbook .page-3 .page-3-word-3{
+	width: 3rem;
+	height: 1.3rem;
+	margin-top: 0.5rem;
+	margin-left: 1rem;
+}
+
+.flipbook .page-3 .page-3-word-4{
+	width: 2.3rem;
+	height: 1.5rem;
+	margin-top: 1rem;
+	margin-left: 8rem;
+}
+
+.flipbook .page-3 .page-3-grade{
+	margin-left: 2.1rem;
+	width: 7rem;
+	height: 12rem;
+	border:0.25rem solid #4E3A3B;
+}
+
+.flipbook .page-4 .page-4-title{
+	width: 6rem;
+	height: 1.7rem;
+	margin-left: 2.5rem;
+	margin-top:0.8rem;
+}
+
+.flipbook .page-4 .page-4-grade{
+	width: 7rem;
+	height: 14rem;
+	border:0.2rem solid #623E3C;
+	margin-left: 1.8rem;
+}
+
+.flipbook .page-4 .page-4-grades{
+	margin-left: 0.1rem;
+	margin-top: 0.13rem;
+	list-style: none;
+	font-size: 0.8rem;
+	font-weight: bold;
+}
+
+.flipbook .page-5 .page-5-word-1{
+	width: 8rem;
+	height: 1.4rem;
+	margin-left: 1.5rem;
+	margin-top:4rem;
+}
+
+.flipbook .page-5 .page-5-best{
+	margin-left:10%;
+	width: 80%;
+	/*height: 1.4rem;*/
+	margin-top:0.6rem;
+	font-weight: bold;
+	font-size: 0.8rem;
+	text-align: center;
+	color: #FE5857;
+}
+
+.flipbook .page-5 .page-5-worst{
+	margin-left:10%;
+	width: 80%;
+	/*height: 1.4rem;*/
+	margin-top:0.6rem;
+	font-weight: bold;
+	font-size: 0.8rem;
+	text-align: center;
+	color: #FE5857;
+}
+
+.flipbook .page-5 .page-5-word-2{
+	width: 8rem;
+	height: 1.1rem;
+	/*margin-top:0.3rem;*/
+	margin-left: 1.5rem;
+}
+
+.flipbook .page-5 .page-5-word-3{
+	width: 8rem;
+	height: 1.5rem;
+	margin-top:0.5rem;
+	margin-left: 1.5rem;
+}
+.flipbook .page-5 .page-5-pg{
+	width: 2rem;
+	height: 2rem;
+	margin-top:1rem;
+	margin-left: 4.3rem;
+}
+
+.flipbook .page-6 .page-6-word-1{
+	width: 2rem;
+	height: 1.5rem;
+	position: absolute;
+	top: 3rem;
+	left: 8rem;
+}
+
+.flipbook .page-6 .page-6-word-2{
+	width: 5rem;
+	height: 1.4rem;
+	position: absolute;
+	top: 5.95rem;
+	left: 2.4rem;
+}
+
+.flipbook .page-6 .page-6-word-3{
+	width: 1.4rem;
+	height: 1.4rem;
+	position: absolute;
+	top: 6rem;
+	right: 1.2rem;
+}
+
+.flipbook .page-6 .page-6-word-4{
+	width: 6rem;
+	height: 1.4rem;
+	position: absolute;
+	top: 9rem;
+	right: 1.2rem;
+}
+
+.flipbook .page-6 .page-6-best{
+	font-size: 1rem;
+	font-weight: bold;
+	color: #FE5857;
+	margin-top: 6.1rem;
+	margin-left: 1.8rem;
+	display: inline-block;
+}
+
+.flipbook .page-6 .page-6-level{
+	font-size: 1rem;
+	font-weight: bold;
+	color: #FE5857;
+	margin-left: 5.1rem;
+	display: inline-block;
+}
+
+.flipbook .page-6 .page-6-fail{
+	font-size: 1rem;
+	font-weight: bold;
+	color: #FE5857;
+	margin-top:1.9rem;
+	margin-left: 3.4rem;
+}
+
+.flipbook .page-7 .page-7-title{
+	width: 5rem;
+	height: 1.2rem;
+	margin-top:1.5rem;
+	margin-left: 3rem;
+}
+
+.flipbook .page-7 .page-7-chart{
+	width: 8rem;
+	height: 6rem;
+	border:0.15rem solid #623E3C;
+	margin-top:0.3rem;
+	margin-left: 1.2rem;
+	overflow: hidden;
+}
+
+.flipbook .page-7 .page-7-chart #container{
+	box-sizing: border-box;
+	margin-top: 0.3rem;
+}
+
+.flipbook .page-7 .page-7-pg{
+	width: 1.8rem;
+	height: 1.5rem;
+	position: absolute;
+	top: 8.7rem;
+	right: 2rem;
+}
+
+.flipbook .page-7 .page-7-compare-1{
+	width: 6rem;
+	height: 1.5rem;
+	margin-top:0.8rem;
+	margin-left: 1.2rem;
+}
+
+.flipbook .page-7 .page-7-compare-2{
+	width: 6rem;
+	height: 1rem;
+	margin-top:0.35rem;
+	margin-left: 1.2rem;
+}
+
+.flipbook .page-7 .page-7-compare-3{
+	width: 4rem;
+	height: 1rem;
+	margin-top:0.5rem;
+	margin-left: 6rem;
+}
+.flipbook .page-7 .page-7-GPA{
+	font-size:1rem;
+	font-weight: bold;
+	color: #FE5857;
+	position: absolute;
+	right: 1.3rem;
+	top: 10.32rem;
+}
+
+.flipbook .page-7 .page-7-per{
+	font-size:1rem;
+	font-weight: bold;
+	color: #FE5857;
+	position: absolute;
+	left: 4.8rem;
+	top: 12.8rem;
+}
+
+/*.flipbook .page-9 .page-9-word-1{
+	width: 6rem;
+	height: 1.1rem;
+	position: absolute;
+	top: 3rem;
+	right:1rem;
+}
+
+.flipbook .page-9 .page-9-credit{
+	font-size:1rem;
+	font-weight: bold;
+	color: #FE5857;
+	margin-top: 5.3rem;
+	margin-left: 7rem;
+}
+
+.flipbook .page-9 .page-9-word-2{
+	width: 2rem;
+	height: 1.2rem;
+	position: absolute;
+	top: 5.25rem;
+	right:1.1rem;
+}
+
+.flipbook .page-9 .page-9-word-3{
+	width: 2rem;
+	height: 1.2rem;
+	position: absolute;
+	top: 7.5rem;
+	right:1.1rem;
+}
+*/
+.flipbook .page-8 .page-8-thank-1{
+	width: 5rem;
+	height: 1.1rem;
+	margin-top: 3.5rem;
+	margin-left: 3rem;
+}
+
+.flipbook .page-8 .page-8-thank-2{
+	width: 5rem;
+	height: 1.3rem;
+	margin-top:0.3rem;
+	margin-left: 3rem;
+}
+
+.flipbook .page-8 .page-8-logo{
+	width: 5rem;
+	height:5rem;
+	margin-top: 0.5rem;
+	margin-left: 3rem;
+}
+
+.flipbook .page-8 .page-8-back{
+	width: 2rem;
+	height:2rem;
+	margin-top:2.2rem;
+	margin-left: 4.4rem;
+	z-index: 20000;
+}
+
+.flipbook .page-9 .page-9-u{
+	width: 0.9rem;
+	height: 1.3rem;
+	position: absolute;
+	left: 1rem;
+	top: 3rem;
+}
+
+.flipbook .page-9 .page-9-word{
+	width: 5.8rem;
+	height: 1.2rem;
+	position: absolute;
+	left: 1rem;
+	top: 4.7rem;
+	/*top: 5.5rem;*/
+}
+
+.flipbook .page-9 .page-9-word1{
+	width: 3rem;
+	height: 1.35rem;
+	position: absolute;
+	left: 1rem;
+	top: 6.3rem;
+	left: 0.68rem;
+}
+
+.flipbook .page-9 .page-9-word2{
+	width: 2.6rem;
+	height: 1.25rem;
+	position: absolute;
+	left: 1rem;
+	top:8.15rem;
+}
+
+.flipbook .page-9  .page-9-GPA{
+	font-size:1rem;
+	font-weight: bold;
+	color: #FE5857;
+	position: absolute;
+	/*top: 5.52rem;*/
+	top: 4.78rem;
+	right: 1.7rem;
+}
+
+.flipbook .page-9  .page-9-per{
+	font-size:1rem;
+	font-weight: bold;
+	color: #FE5857;
+	position: absolute;
+	top: 8.2rem;
+	left: 4rem;
+}
+
+.flipbook .page-9 .page-9-compare-1{
+	width: 4.8rem;
+	height: 0.95rem;
+	position: absolute;
+	/*top: 6.7rem;
+	left: 1rem;*/
+	top: 8.35rem;
+	left: 1rem;
+}
+
+.flipbook .page-9 .page-9-compare-2{
+	width: 3.8rem;
+	height: 1.2rem;
+	position: absolute;
+	top: 8.2rem;
+	left: 5rem;
+}
+
+.flipbook .page-9 .page-9-evi{
+	font-size: 0.2rem;
+	/*font-weight: bold;*/
+	color: #D0D0D0;
+	position: absolute;
+	top: 9.5rem;
+	left: 1.3rem;
+}
+.flipbook .page-9 .page-9-sign-1{
+	width: 8rem;
+	height: 1.5rem;
+	position: absolute;
+	top: 10.5rem;
+	left: 1.6rem;
+	display: none;
+}
+
+.flipbook .page-9 .page-9-sign-2{
+	width: 8rem;
+	height: 1.5rem;
+	position: absolute;
+	top: 10.5rem;
+	left: 1.5rem;
+	display: none;
+}
+
+.flipbook .page-9 .page-9-sign-3{
+	width: 4rem;
+	height: 1.7rem;
+	position: absolute;
+	top: 10.5rem;
+	left: 3.2rem;
+	display: none;
+}
+
+.flipbook .page-9 .page-9-sign-4{
+	width: 6.2rem;
+	height: 1.6rem;
+	position: absolute;
+	top: 10.5rem;
+	left: 2.5rem;
+	display: none;
+}
